@@ -10,9 +10,15 @@
     <h2>Thème : RPG</h2>
 <?php
 
+spl_autoload_register(function ($class_name) {
+    require 'classes/'. $class_name . '.php';
+});
 
+//===================== Characters =====================// 
+$character1 = new Character("Flibouche");
 
-
+//===================== Actions =====================// 
+echo $character1->getInfos();
 
 
 
